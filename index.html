@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+        background-color: rgb(67, 40, 28);
+        }
+
+        .header {
+            color: rgb(251,243,192);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            justify-content: center;
+        }
+        .logo {
+            height: 25px;
+            position: relative;
+            top: 3px;
+        }
+
+        .page {
+            background-color: rgb(247, 245, 236);
+            border: solid none;
+           border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content:center;
+            grid-template-areas:
+                "order-box payment"
+                "total total";
+        }
+        .order-box {
+            grid-area: order-box;
+        }
+        .paymant {
+            grid-area: payment;
+        }
+        .checkout {
+            background-color: rgb(184, 118, 70);
+            border: none;
+            border-radius: 20px;
+            width: 95%;
+            height: 40px;
+            font-size: 16px;
+            margin-bottom: 60px;
+        }
+
+        .box-border {
+            border: none;
+            background-color: bisque;
+            margin: 5% 5%;
+            padding: 1px 15px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px gray;
+        }
+        .box-title {
+            text-decoration: none;
+            color: #885a2d;
+            font-weight: normal;
+            font-size: 16px;
+        }
+        .itoms {   
+            display: grid;
+            grid-template-columns: 1fr 8fr 2fr;
+            grid-template-areas: 
+                "posytion posytion-1 posytion-2";
+        }
+        .itom {   
+            display: grid;
+            grid-template-columns: 1fr 8fr 2fr;
+            grid-template-areas: 
+                ". posytion-3 .";
+        }
+        .ul {
+            list-style-type: none;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        .border-list {
+            border-bottom: solid 1px #885a2d;
+        }
+        .list-posytion {
+            grid-area: posytion;
+        }
+        .list-posytion-1 {
+            grid-area:  posytion-1;
+            font-weight: bold;
+        }
+        .list-posytion-2 {
+            grid-area: posytion-2;
+            font-weight: bold;
+            text-align: center;
+        }
+        .list-posytion-3 {
+            grid-area: posytion-3;
+            font-size: 12px;
+            color: #885a2d;
+        }
+
+        .overlayed-input {
+            position: relative;
+            margin: 20px 5px;
+        }
+        .input {
+            border: solid 1px #885a2d;;
+            width: 100%;
+            padding: 8px;
+            border-radius: 20px;
+            font-size: 14px;
+            background-color: bisque;
+        }
+        .input-CCV {
+            border: solid 1px #885a2d;;
+            width: 30%;
+            padding: 8px;
+            border-radius: 20px;
+            font-size: 14px;
+            background-color: bisque;
+            }
+        .input-label {
+            color: #885a2d;
+            font-size: 12px;
+            position: absolute;
+            background-color: bisque;
+            left: 16px;
+            top: -6px;
+            padding: 0 2px;
+        }
+
+        .total {
+            grid-area: total;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .totals-table {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+            margin-top: 60px;
+        }
+        .al-left {
+            text-align: left ;
+        }
+        .al-right {
+            text-align: right ;
+        }
+        .a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body> 
+    <header class="header">
+        <h1> 
+            <img src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png" 
+            alt="coffee masters"
+            class="logo"/>
+            Coffee Masters
+        </h1>
+    </header>
+    <div class="page">
+        <tbody>
+            <section class="order-box">
+                <div class="box-border">
+                    <h2 class="box-title">ITEMS</h2>
+                    <ul class="ul border-list">
+                        <div>
+                            <li class="itoms">
+                                <div class="list-posytion">1x</div>
+                                <div class="list-posytion-1">Cappuccino</div>
+                                <div class="list-posytion-2">$3.35</div>
+                            </li> 
+                        </div>
+                        <div class="itom">   
+                            <li class="list-posytion-3">Lite foam</li>
+                        </div>
+                    </ul>
+                    <ul class="ul border-list">
+                        <div>
+                            <li class="itoms">
+                                <div class="list-posytion">1x</div>
+                                <div class="list-posytion-1">Cappuccino</div>
+                                <div class="list-posytion-2">$7.90</div>
+                            </li> 
+                        </div>
+                        <div class="itom">   
+                            <li class="list-posytion-3">Almond Milk</li>
+                        </div>
+                        <div class="itom">   
+                            <li class="list-posytion-3">Double Espresso Shot</li>
+                        </div>
+                    </ul>   
+                    <ul class="ul">
+                        <div>
+                            <li class="itoms">
+                                <div class="list-posytion">1x</div>
+                                <div class="list-posytion-1">Croissant</div>
+                                <div class="list-posytion-2">$5.37</div>
+                            </li> 
+                        </div>
+                        <div class="itom">   
+                            <li class="list-posytion-3">Butter</li>
+                        </div>
+                    </ul>     
+                </div>
+            </section>
+
+            <section class="paymant">
+                <div>
+                    <div class="box-border">
+                        <h2 class="box-title">NAME</h2>
+                            <div class="overlayed-input">
+                                <label for="Name" class="input-label">Name for order</label>
+                                <input id="Name" class="input"/>
+                            </div>
+                    </div>
+
+                    <div class="box-border">
+                        <h2 class="box-title">PAYMENT</h2>
+                            <div class="overlayed-input">
+                                <label for="CC" class="input-label">Card number</label>
+                                <input id="CC" class="input"/>
+                            </div>
+
+                            <div class="overlayed-input">
+                                <label for="CCV" class="input-label">CCV Number</label>
+                                <input id="CCV" class="input-CCV"/>
+                            </div>
+                    </div>
+                </div>
+            </section>
+        </tbody>
+
+        <footer class="total">
+            <table class="totals-table">
+                <tr>
+                    <td class="al-left">Subtotal:</td>
+                    <td class="al-right">$19.27</td>
+                </tr>
+                <tr>
+                    <td class="al-left">Tax:</td>
+                    <td class="al-right">$0.96</td>
+                </tr>
+                <tr>
+                    <th class="al-left">Total:</th>
+                    <th class="al-right">$20.23</th>
+                </tr>
+            </table>
+            <button class="checkout"><a href="#" class="a">Place order</a></button>
+        </footer>
+    </div>
+</body>
+</html>
